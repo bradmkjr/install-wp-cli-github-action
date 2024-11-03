@@ -75,7 +75,7 @@ runs:
         EOF
 
     - name: Verify wp-cli binary
-      if: ${{ inputs.verify }}
+      if: ${{ inputs.verify == 'true' }}
       shell: bash
       run: |-
         echo '::group::Verify WP-CLI binary'
